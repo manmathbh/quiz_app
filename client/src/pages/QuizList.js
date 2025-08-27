@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../utils/api';
 import { Search, Filter, Play, Clock, Target, Users } from 'lucide-react';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -32,7 +32,7 @@ const QuizList = () => {
       if (category && category !== 'All') params.append('category', category);
       if (difficulty && difficulty !== 'All') params.append('difficulty', difficulty);
 
-      const response = await axios.get(`/api/quiz?${params}`);
+      const response = await api.get(`/api/quiz?${params}`);
       setQuizzes(response.data.quizzes);
       setTotalPages(response.data.totalPages);
     } catch (error) {
