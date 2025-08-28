@@ -21,7 +21,7 @@ app.use(helmet());
 const corsOptions = {
     origin: 'https://quiz-l8y1a5b5c-manmaths-projects-87186561.vercel.app'
 };
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Trust proxy for rate limiting
 app.set('trust proxy', 1);
@@ -80,13 +80,13 @@ app.use('/api/score', require('./routes/score'));
 app.use('/api/user', require('./routes/user'));
 
 // Serve static assets if in production
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client/build'));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
   
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-//   });
-// }
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 
