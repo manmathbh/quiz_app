@@ -16,6 +16,11 @@ const app = express();
 
 // Security middleware
 app.use(helmet());
+
+// Define the allowed origin (your Vercel frontend URL)
+const corsOptions = {
+    origin: 'https://quiz-l8y1a5b5c-manmaths-projects-87186561.vercel.app'
+};
 app.use(cors());
 
 // Trust proxy for rate limiting
