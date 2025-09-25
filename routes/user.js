@@ -79,21 +79,21 @@ router.get('/quizzes', auth, async (req, res) => {
 // @access  Private
 router.get('/dashboard', auth, async (req, res) => {
   try {
-    // Get user stats
+    
     const user = await User.findById(req.user.id);
     
-    // Get recent quizzes taken
+    
     const recentScores = await Score.find({ user: req.user.id })
       .populate('quiz', 'title category difficulty')
       .sort({ completedAt: -1 })
       .limit(5);
 
-    // Get user's created quizzes
+    
     const createdQuizzes = await Quiz.find({ creator: req.user.id })
       .sort({ createdAt: -1 })
       .limit(5);
 
-    // Get category performance
+    
     const categoryStats = await Score.aggregate([
       { $match: { user: req.user._id } },
       {
