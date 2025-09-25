@@ -1,6 +1,6 @@
-# 🎯 Quiz Editor Guide - Adding Questions & Editing Timers
+#  Quiz Editor Guide - Adding Questions & Editing Timers
 
-## 📋 **Overview**
+##  **Overview**
 This guide shows you how to add more questions to existing DSA quizzes and modify quiz timers.
 
 ## 🔧 **Method 1: Using the Quiz Editor Script (Recommended)**
@@ -38,7 +38,7 @@ const addQuestionsToQuiz = async () => {
     quiz.timeLimit = Math.max(15, quiz.questions.length * 2 + 5);
     
     await quiz.save();
-    console.log(`✅ Added ${additionalQuestions.length} questions`);
+    console.log(` Added ${additionalQuestions.length} questions`);
   } catch (error) {
     console.error('Error:', error);
   }
@@ -64,7 +64,7 @@ const updateAllDSATimers = async () => {
 };
 ```
 
-## 🎨 **Method 2: Direct Database Operations**
+##  **Method 2: Direct Database Operations**
 
 ### **Using MongoDB Compass or MongoDB Shell**
 
@@ -103,7 +103,7 @@ db.quizzes.updateOne(
 )
 ```
 
-## 🚀 **Method 3: Create New Quizzes with More Questions**
+##  **Method 3: Create New Quizzes with More Questions**
 
 ### **Template for New DSA Quiz**
 ```javascript
@@ -130,7 +130,7 @@ const newQuiz = {
 };
 ```
 
-## 📊 **Question Structure**
+##  **Question Structure**
 
 ### **Required Fields**
 ```javascript
@@ -201,7 +201,7 @@ const calculateTimeLimit = (questions, difficulty) => {
 };
 ```
 
-## 🛠️ **Quick Commands**
+##  **Quick Commands**
 
 ### **View All DSA Quizzes**
 ```bash
@@ -228,7 +228,7 @@ node edit-quiz.js
 node edit-quiz.js
 ```
 
-## 📝 **Best Practices**
+##  **Best Practices**
 
 ### **Question Writing Tips**
 1. **Clear and Concise:** Make questions easy to understand
@@ -249,7 +249,7 @@ node edit-quiz.js
 3. **Balanced Difficulty:** Mix different difficulty levels
 4. **Clear Categories:** Use descriptive titles and categories
 
-## 🔍 **Troubleshooting**
+##  **Troubleshooting**
 
 ### **Common Issues**
 1. **Quiz Not Found:** Check the exact title spelling
@@ -274,7 +274,7 @@ quiz.questions.forEach((q, i) => {
 });
 ```
 
-## 🎯 **Next Steps**
+##  **Next Steps**
 
 1. **Run the editor script** to see how it works
 2. **Modify the script** to add questions to your preferred quizzes
