@@ -1,6 +1,6 @@
-# 🚀 Quiz Platform Deployment Guide
+#  Quiz Platform Deployment Guide
 
-## 📋 **Deployment Options**
+##  **Deployment Options**
 
 ### **Option 1: Render (Recommended - Free)**
 ### **Option 2: Railway (Free tier)**
@@ -8,7 +8,7 @@
 
 ---
 
-## 🎯 **Option 1: Deploy to Render (FREE)**
+##  **Option 1: Deploy to Render (FREE)**
 
 ### **Step 1: Prepare Your Repository**
 1. **Push to GitHub:**
@@ -45,7 +45,7 @@ Click "Create Web Service" and wait for deployment!
 
 ---
 
-## 🚂 **Option 2: Deploy to Railway (FREE)**
+##  **Option 2: Deploy to Railway (FREE)**
 
 ### **Step 1: Prepare Repository**
 ```bash
@@ -76,7 +76,7 @@ Railway will automatically deploy your app!
 
 ---
 
-## ⚡ **Option 3: Deploy to Heroku (PAID)**
+##  **Option 3: Deploy to Heroku (PAID)**
 
 ### **Step 1: Install Heroku CLI**
 ```bash
@@ -114,14 +114,14 @@ git push heroku main
 
 ## 🔧 **Pre-Deployment Checklist**
 
-### **✅ Files Ready:**
+### ** Files Ready:**
 - [x] `package.json` with build scripts
 - [x] `Procfile` for Heroku
 - [x] `server.js` configured for production
 - [x] MongoDB Atlas connection string
 - [x] Environment variables set
 
-### **✅ Code Ready:**
+### ** Code Ready:**
 - [x] Frontend builds successfully
 - [x] Backend API endpoints working
 - [x] Database connection established
@@ -129,7 +129,7 @@ git push heroku main
 
 ---
 
-## 🌐 **Post-Deployment**
+##  **Post-Deployment**
 
 ### **1. Test Your App**
 - Visit your deployed URL
@@ -149,7 +149,7 @@ git push heroku main
 
 ---
 
-## 🛠️ **Troubleshooting**
+##  **Troubleshooting**
 
 ### **Common Issues:**
 
@@ -188,7 +188,7 @@ echo $JWT_SECRET
 
 ---
 
-## 📊 **Performance Optimization**
+##  **Performance Optimization**
 
 ### **1. Enable Compression**
 ```javascript
@@ -210,9 +210,9 @@ app.use(express.static('client/build', {
 
 ---
 
-## 🔒 **Security Checklist**
+##  **Security Checklist**
 
-### **✅ Production Security:**
+### ** Production Security:**
 - [x] Strong JWT_SECRET
 - [x] HTTPS enabled
 - [x] Rate limiting configured
@@ -223,7 +223,7 @@ app.use(express.static('client/build', {
 
 ---
 
-## 🎯 **Quick Deploy Commands**
+##  **Quick Deploy Commands**
 
 ### **For Render:**
 ```bash
@@ -264,7 +264,7 @@ git push heroku main
 
 ---
 
-## 🎉 **Success!**
+##  **Success!**
 
 Once deployed, your quiz platform will be available at:
 - **Render:** `https://your-app-name.onrender.com`
@@ -278,7 +278,7 @@ Once deployed, your quiz platform will be available at:
 
 ---
 
-## 📞 **Need Help?**
+##  **Need Help?**
 
 If you encounter issues:
 1. Check the deployment logs
@@ -287,4 +287,4 @@ If you encounter issues:
 4. Check MongoDB Atlas connection
 5. Review the troubleshooting section above
 
-**Happy Deploying! 🚀**
+**Happy Deploying! **
