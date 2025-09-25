@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Middleware to verify JWT token
 const auth = async (req, res, next) => {
   try {
     const token = req.header('Authorization')?.replace('Bearer ', '');
@@ -25,7 +24,6 @@ const auth = async (req, res, next) => {
   }
 };
 
-// Middleware to check if user is admin
 const admin = async (req, res, next) => {
   try {
     if (req.user.role !== 'admin') {
@@ -37,7 +35,6 @@ const admin = async (req, res, next) => {
   }
 };
 
-// Middleware to check if user owns the resource
 const owner = async (req, res, next) => {
   try {
     const resourceUserId = req.params.userId || req.body.userId;
