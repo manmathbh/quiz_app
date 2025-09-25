@@ -91,22 +91,22 @@ To create an admin user, you can either:
 ## Features Implemented
 
 ### Backend (Complete)
-- ✅ User authentication (register, login, JWT)
-- ✅ User management and profiles
-- ✅ Quiz CRUD operations
-- ✅ Score tracking and analytics
-- ✅ Admin routes and middleware
-- ✅ Database models and relationships
-- ✅ API endpoints for all features
+-  User authentication (register, login, JWT)
+-  User management and profiles
+-  Quiz CRUD operations
+-  Score tracking and analytics
+-  Admin routes and middleware
+-  Database models and relationships
+-  API endpoints for all features
 
 ### Frontend (Partially Complete)
-- ✅ User authentication pages (login/register)
-- ✅ Navigation and layout
-- ✅ Home page with features
-- ✅ Dashboard with statistics
-- ✅ Quiz listing with search/filter
-- ✅ Placeholder pages for remaining features
-- ✅ Responsive design with Tailwind CSS
+-  User authentication pages (login/register)
+-  Navigation and layout
+-  Home page with features
+-  Dashboard with statistics
+-  Quiz listing with search/filter
+-  Placeholder pages for remaining features
+-  Responsive design with Tailwind CSS
 
 ### Features to Complete
 - Quiz taking interface
