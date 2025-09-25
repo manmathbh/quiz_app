@@ -92,12 +92,10 @@ const quizSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Calculate total points
 quizSchema.virtual('totalPoints').get(function() {
   return this.questions.reduce((total, question) => total + question.points, 0);
 });
 
-// Update quiz stats
 quizSchema.methods.updateStats = function(score) {
   this.stats.totalAttempts += 1;
   this.stats.totalScores += score;
@@ -105,7 +103,6 @@ quizSchema.methods.updateStats = function(score) {
   return this.save();
 };
 
-// Get quiz without correct answers for taking
 quizSchema.methods.getQuizForTaking = function() {
   const quizObj = this.toObject();
   quizObj.questions = quizObj.questions.map(q => ({
